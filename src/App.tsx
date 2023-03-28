@@ -11,6 +11,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -21,51 +26,21 @@ function App(): JSX.Element {
             >
                 UD CISC275 with React Hooks and TypeScript(This is a Header)
             </header>
-<<<<<<< HEAD
-            <p></p>
-            <Container>
-                <Row>
-                    <Col>
-                        <h1>Sreya website</h1>
-                        Edit <code>src/App.tsx</code> and save. This page will
-                        automatically reload. Sreya Venkatesh Hello World
-                        <div>
-                            <Button onClick={() => console.log("Hello World!")}>
-                                Log Hello World
-                            </Button>
-                        </div>
-                        <div
-                            style={{
-                                backgroundColor: "red",
-                                width: 50,
-                                height: 40
-                            }}
-                        ></div>
-                    </Col>
-                    <Col>
-                        <div
-                            style={{
-                                backgroundColor: "red",
-                                width: 50,
-                                height: 40
-                            }}
-                        ></div>
-                        To-do List:
-                        <ol>
-                            <li>Get Breakfast</li>
-                            <li>Do Homework</li>
-                            <li>Practice Piano</li>
-                        </ol>
-                        <img
-                            src="https://excitedcats.com/wp-content/uploads/2020/07/yellow-cat-playing-piano_amenic181-Shutterstock.jpg"
-                            alt="Cat playing piano"
-                        />
-                    </Col>
-                </Row>
-            </Container>
-=======
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
+            <hr></hr>
+            <GiveAttempts></GiveAttempts>
+            <hr></hr>
+            <EditMode></EditMode>
+            <hr></hr>
+            <ChangeColor></ChangeColor>
+            <hr></hr>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {<DoubleHalf></DoubleHalf>}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
@@ -84,7 +59,6 @@ function App(): JSX.Element {
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-state
         </div>
     );
 }
